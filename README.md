@@ -12,7 +12,7 @@ Este repositorio contiene un CV creado en `R` con procesos de automatización qu
 
 - The [`vitae`](https://pkg.mitchelloharawild.com/vitae/) :package: Maqueta de CV. [![CRAN
 status](https://www.r-pkg.org/badges/version/vitae)](https://cran.r-project.org/package=vitae)
-- [`Sam Abbott`s CV`](https://github.com/seabbs/cv): repo con maqueta de CV.
+- [`Sam Abbotts CV`](https://github.com/seabbs/cv): repo con maqueta de CV.
 - [`tidyverse`](https://www.tidyverse.org) :tool: Utilizado para leer y manipular data. 
 - [`here`](https://here.r-lib.org) :package: para la gestión de rutas a las bases con información.
 - [`tinytex`](https://github.com/yihui/tinytex) :package: administrador de paquetes adicionales en latex.
