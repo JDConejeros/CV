@@ -1,6 +1,6 @@
 # José Conejeros Curriculum Vitae (CV)
 
-Este repositorio contiene un CV creado en R con procesos de automatización que permiten una escritura más rápida y ajuste en el diseño. Puede revisar el CV en español [aquí](https://github.com/JDConejeros/CV/blob/master/CV_Spanish.pdf). A continuación se presenta la estructura de este repositoria y las herramientas utilizadas. Puede forkear este repositorio para su uso y mejoras.  
+Este repositorio contiene un CV creado en `R` con procesos de automatización que permiten una escritura más rápida y ajustes menores en el diseño. Puede revisar el CV en español [aquí](https://github.com/JDConejeros/CV/blob/master/CV_Spanish.pdf). A continuación se presenta la estructura de este repositoria y las herramientas utilizadas. Puede forkear este repositorio para su uso y mejoras.  
 ## Estructura
 
 - `CV_Spanish.Rmd`: Estructura del CV implementada en un documento [`rmarkdown`](https://rmarkdown.rstudio.com).
@@ -12,7 +12,7 @@ Este repositorio contiene un CV creado en R con procesos de automatización que 
 
 - The [`vitae`](https://pkg.mitchelloharawild.com/vitae/) :package: Maqueta de CV. [![CRAN
 status](https://www.r-pkg.org/badges/version/vitae)](https://cran.r-project.org/package=vitae)
-- [Sam Abbott`s CV](https://github.com/seabbs/cv): repo con maqueta de CV.
+- [`Sam Abbott`s CV`](https://github.com/seabbs/cv): repo con maqueta de CV.
 - [`tidyverse`](https://www.tidyverse.org) :tool: Utilizado para leer y manipular data. 
 - [`here`](https://here.r-lib.org) :package: para la gestión de rutas a las bases con información.
 - [`tinytex`](https://github.com/yihui/tinytex) :package: administrador de paquetes adicionales en latex.
