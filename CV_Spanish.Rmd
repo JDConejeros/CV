@@ -12,7 +12,6 @@ email: jdconejeros@uc.cl
 aboutme: | 
   | **Temas de interés**: pobreza, desigualdad, justicia social, ciencia de datos y metodologías cuantitativas. 
   | Autodidacta en la programación para el procesamiento, análisis y visualización de datos sociales. 
-  | Nota: Este documento fue elaborado en [`R-markdown`](https://rmarkdown.rstudio.com/). Puede revisar el código [aqui](https://github.com/JDConejeros/CV). 
 linkedin: joseconejerosp
 github: JDConejeros
 headcolor: 203C60
@@ -26,6 +25,8 @@ header-includes:
 - \definecolor{text}{HTML}{595959} #Texto
 - \definecolor{graytext}{HTML}{101E2F} #Títulos
 - \definecolor{lighttext}{HTML}{808080} # Pie de página
+- \newcommand{\bcenter}{\begin{center}}
+- \newcommand{\ecenter}{\end{center}}
 ---
 
 ```{r setup, include=FALSE}
@@ -191,3 +192,10 @@ detailed_entries(edu2,
 ```
 
 
+\vspace{1 cm}
+
+\bcenter
+
+**Nota:** Este documento fue elaborado en [`R-markdown`](https://rmarkdown.rstudio.com/). Para replicar el formato puede acceder al código en el siguiente **[link](https://github.com/JDConejeros/CV)**. 
+
+\ecenter
