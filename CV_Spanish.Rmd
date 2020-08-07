@@ -1,9 +1,9 @@
 ---
 name: | 
   José Daniel Conejeros
-date: 'Abril 2020'
+date: 'UP: Agosto 2020'
 position: | 
-  | [Magíster(c) en Sociología](http://sociologia.uc.cl/postgrado/magister-en-sociologia/), Pontificia Universidad Católica de Chile
+  | [Magíster en Sociología(c)](http://sociologia.uc.cl/postgrado/magister-en-sociologia/), Pontificia Universidad Católica de Chile
   | Licenciado en Ciencias Sociales, Pontificia Universidad Católica de Chile
 address: Santiago, Chile. Abril 2020
 #profilepic: JConejeros.jpg
@@ -11,7 +11,7 @@ phone: +56 9 64924057
 email: jdconejeros@uc.cl
 aboutme: | 
   | **Temas de interés**: pobreza, desigualdad, justicia social, ciencia de datos y metodologías cuantitativas. 
-  | Autodidacta en la programación para el procesamiento, análisis y visualización de datos sociales. 
+  | Experiencia en programación para el procesamiento, análisis y visualización de datos sociales ([R](https://www.r-project.org/) y [Stata](https://www.stata.com/)). 
 linkedin: joseconejerosp
 github: JDConejeros
 headcolor: 203C60
@@ -133,6 +133,8 @@ teaching2 %>%
 ```
 
 
+\break
+
 # Cursos 
 
 ```{r}
@@ -144,8 +146,6 @@ training %>%
     where = where, 
     why = why)
 ```
-
-\break
 
 # Habilidades
 
@@ -179,6 +179,8 @@ grants %>%
     when = when,  
     where = where)
 ```
+
+\break
 
 # Otros antecedentes 
 
