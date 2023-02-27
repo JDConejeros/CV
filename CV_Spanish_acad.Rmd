@@ -1,0 +1,256 @@
+---
+name: "José Daniel Conejeros, MSc©, BSc"
+#date: 'UP: Enero 2023'
+position: "[Msc© en Sociología](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) & [Estadística](https://www.mat.uc.cl/me.html) | Pontificia Universidad Católica de Chile"
+#profilepic: JConejeros.jpg
+email: jdconejeros@uc.cl
+www: jd-conejeros.com
+github: github.com/JDConejeros
+orcid: orcid.org/0000-0003-3402-4361
+twitter: jose_conejeros
+linkedin: joseconejerosp
+researchgate: Jose-Conejeros
+phone: +56 9 6492 4057
+aboutme: "**Áreas de interés:** Vulnerabilidades sociales, enfermedades infecciosas y técnicas de modelamiento estadístico."
+headcolor: "203C60"
+csl: apa-cv.csl # change this if you want to use other citation styles
+output: 
+  vitae::awesomecv:
+    pandoc_args: ["--lua-filter=lua/bib_bold.lua"] 
+    keep_tex: true
+header-includes:
+- \geometry{left=2cm, top=2cm, right=2cm, bottom=2cm, footskip=0.5cm}
+- \newcommand{\bcenter}{\begin{center}}
+- \newcommand{\ecenter}{\end{center}}
+- \fancyfoot[L]{\fontsize{8pt}{-1em}\footerfont\color{lighttext}{Página \thepage \ de \pageref{LastPage}}}
+- \fancyfoot[R]{\fontsize{8pt}{-1em}\footerfont\color{lighttext}{Actualizado en Febrero 2023}}
+---
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+library(here)
+library(glue)
+library(tibble)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  cache = FALSE
+)
+```
+
+```{r get data, include=FALSE}
+## Education
+edu <- read_csv2(here::here("data", "ESP", "education.csv"))
+#edu2 <- read_csv2(here::here("data", "ESP", "education2.csv"))
+
+## Research Experience 
+jobs1 <- read_csv2(here::here("data", "ESP", "jobs1.csv"))
+
+## Research center
+centers <- read_csv2(here::here("data", "ESP", "centers.csv"))
+
+## Consulting Experience 
+jobs2 <- read_csv2(here::here("data", "ESP", "jobs2.csv"))
+
+## Training
+training <- read_csv2(here::here("data", "ESP", "training.csv"))
+
+## Teaching 
+teaching1 <- read_csv2(here::here("data", "ESP", "teaching1.csv"))
+
+## Volunter
+services <- read_csv2(here::here("data", "ESP", "services.csv"))
+
+## Skils
+skills <- read_csv2(here::here("data", "ESP", "skills.csv")) %>% 
+  group_by(category) %>% 
+  mutate(skill = paste(skill, collapse = " - ")) %>% 
+  ungroup %>% 
+  unique
+
+## Grants
+grants <- read_csv2(here::here("data", "ESP", "grants.csv"))
+
+## Presentations
+presentations <- read_csv2(here::here("data", "ESP", "presentations.csv"))
+
+## References
+reference <- read_csv2(here::here("data", "ESP", "reference.csv"))
+```
+
+
+# Educación 
+
+```{r}
+detailed_entries(edu, 
+                 when = glue("{start_date}--{end_date}"),
+                 what = degree,
+                 #where = loc,
+                 #with = uni
+                 why = details
+                 )
+```
+
+# Participación en proyectos de investigación
+
+```{r}
+jobs1 %>% 
+  detailed_entries(
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
+```
+
+# Publicaciones
+
+\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}
+
+## Artículos 
+
+
+```{r}
+bibliography_entries("data/my_papers.bib")
+```
+
+## Capítulos de libros
+
+```{r}
+bibliography_entries("data/my_bookch.bib")
+```
+
+
+## Trabajos en revisión 
+
+```{r}
+bibliography_entries("data/my_wip.bib")
+```
+
+\fontsize{10pt}{1.5em}\bodyfontlight\upshape\color{text}
+
+# Presentaciones
+
+```{r}
+presentations %>% 
+  detailed_entries(
+    what = what,
+    with = with,
+    when = when,
+    where = where,
+    why = why)
+```
+
+# Docencia 
+
+```{r}
+teaching1 %>% 
+  detailed_entries(
+    what = what, 
+    when = when,
+    with = with, 
+    where = where, 
+    why = why)
+```
+
+# Afiliación a centros de investigación y asociaciones profesionales
+
+```{r}
+centers %>% 
+  detailed_entries(
+    what = what,
+    #with = with,
+    when = when,
+    #where = where,
+    why = why)
+```
+
+# Consultorías profesionales
+
+```{r}
+jobs2 %>% 
+  detailed_entries(
+    what = role,
+    when = glue("{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
+```
+
+
+# Cursos y certificaciones
+
+```{r}
+training %>% 
+  detailed_entries(
+    what = what, 
+    #with = with, 
+    when = when, 
+    #where = where, 
+    why = why)
+```
+
+
+# Habilidades
+
+```{r}
+skills %>% 
+  detailed_entries(
+    why = skill, 
+    what = category)
+```
+
+
+# Becas y Premios
+
+```{r}
+grants %>% 
+  detailed_entries(
+    why = why, 
+    what = with, 
+    when = when)
+```
+
+\break
+
+# Voluntariado
+
+```{r}
+services %>% 
+  detailed_entries(
+    what = what, 
+    when = when,
+    with = with, 
+    #where = where, 
+    why = why)
+```
+
+# Referencias 
+
+```{r}
+reference %>% 
+  detailed_entries(
+    what = what, 
+    when = when,
+    with = with, 
+    where = where, 
+    why = why)
+```
+
+
+\vspace*{\fill}
+
+\begin{footnotesize}
+\bcenter
+Este documento fue elaborado en \href{https://rmarkdown.rstudio.com/}{R-markdown} con la librería `vitae`. 
+
+Para replicar puedes utilizar el código fuente aquí: \href{https://github.com/JDConejeros/CV}{https://github.com/JDConejeros/CV}
+\ecenter
+\end{footnotesize}
+
+<!--Repositorio de vitae: https://github.com/mitchelloharawild/vitae -->
+

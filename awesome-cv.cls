@@ -68,6 +68,8 @@
 \RequirePackage{setspace}
 % Needed to manage fonts
 \RequirePackage[quiet]{fontspec}
+% Needed to add last page
+\usepackage{lastpage}
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % Needed to manage math fonts
@@ -92,7 +94,6 @@
   pdfkeywords={}
 }
 
-
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
@@ -106,7 +107,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
+\geometry{left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm, footskip=.5cm}
 
 %% Header & Footer
 % Set offset to each header and footer
@@ -191,39 +192,39 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{\vhrulefill{0pt}\\ {\fontsize{16pt}{1em}\headerfontlight\bfseries\color{awesome} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{20pt}{1em}\headerfont\bfseries\color{awesome} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{12pt}{1.5em}\bodyfont\upshape\color{awesome} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1.5em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1.5em}\headerfont\color{text} #1}}
+\newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\textcolor{awesome}{#1}}}
+\newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{0.5em}\bodyfont\color{awesome} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{awesome} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of subentry
-\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
-\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{awesome} #1}}
+\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{awesome} #1}}
 \newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
 \newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
@@ -386,17 +387,17 @@
 %% Define helper macros a user can change easily
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
-\newcommand{\acvHeaderAfterPositionSkip}{.4mm}
+\newcommand{\acvHeaderAfterNameSkip}{.5mm}
+\newcommand{\acvHeaderAfterPositionSkip}{.5mm}
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
-\newcommand{\acvHeaderIconSep}{\space}
-\newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
-\newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+\newcommand{\acvHeaderIconSep}{\space \space}
+\newcommand{\acvHeaderSocialSep}{\quad \quad \quad}
+\newcommand{\acvHeaderAfterSocialSkip}{3mm}
+\newcommand{\acvHeaderAfterQuoteSkip}{2mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{2mm}
+\newcommand{\acvSectionContentTopSkip}{1mm}
 
 
 %-------------------------------------------------------------------------------
@@ -419,7 +420,7 @@
 %-------------------------------------------------------------------------------
 % Define a header for CV
 % Usage: \makecvheader
-\newcommand*{\makecvheader}[1][C]{%
+\newcommand*{\makecvheader}[1][L]{%
   \newcommand*{\drawphoto}{%
     \ifthenelse{\isundefined{\@photo}}{}{%
       \newlength{\photodim}
@@ -455,41 +456,36 @@
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
-      \ifthenelse{\isundefined{\@mobile}}%
+      \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
-          \faMobile\acvHeaderIconSep\@mobile%
+          \href{https://\@homepage}{\faGlobe\acvHeaderIconSep\@homepage}%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \faEnvelope\acvHeaderIconSep\@email%
+          {\faEnvelopeO\acvHeaderIconSep\@email}% 
         }%
-      \ifthenelse{\isundefined{\@homepage}}%
+      \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
+          \faMobile\acvHeaderIconSep\@mobile%
         }%
+      \ifthenelse{\isundefined{\@github}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://github.com/\@github}{\faGithub\acvHeaderIconSep\@github}%
+        }% 
+      \break
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
         {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
-        }%
-      \ifthenelse{\isundefined{\@publons}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://publons.com/researcher/\@publons}{\aiPublonsSquare\acvHeaderIconSep\@publons}%
-        }%
-      \ifthenelse{\isundefined{\@googlescholar}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholarSquare\acvHeaderIconSep\@googlescholar}%
+          %\ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
         }%
       \ifthenelse{\isundefined{\@researchgate}}%
         {}%
@@ -497,23 +493,11 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGateSquare\acvHeaderIconSep\@researchgate}%
         }%
-      \ifthenelse{\isundefined{\@github}}%
+      \ifthenelse{\isundefined{\@googlescholar}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
-        }%
-      \ifthenelse{\isundefined{\@gitlab}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://gitlab.com/\@gitlab}{\faGitlab\acvHeaderIconSep\@gitlab}%
-        }%
-      \ifthenelse{\isundefined{\@stackoverflowid}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
+          \href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholarSquare\acvHeaderIconSep\@googlescholar}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
@@ -538,6 +522,24 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.reddit.com/user/\@reddit}{\faReddit\acvHeaderIconSep\@reddit}%
+        }%
+      \ifthenelse{\isundefined{\@publons}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://publons.com/researcher/\@publons}{\aiPublonsSquare\acvHeaderIconSep\@publons}%
+        }%
+      \ifthenelse{\isundefined{\@gitlab}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://gitlab.com/\@gitlab}{\faGitlab\acvHeaderIconSep\@gitlab}%
+        }%
+      \ifthenelse{\isundefined{\@stackoverflowid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
         }%
       \ifthenelse{\isundefined{\@xing}}%
         {}%
@@ -572,21 +574,22 @@
 
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
-
 \renewcommand{\section}[1]{%
 	\vspace{\acvSectionTopSkip}
 	\sectionstyle{#1}
 	\phantomsection
-	\color{gray}\vhrulefill{0.9pt}
+	\color{awesome}
+	\vspace{1mm}
+	\hrule height 0.03cm width 17.35cm
 }
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
 \renewcommand{\subsection}[1]{%
 	\vspace{\acvSectionContentTopSkip}
-	\vspace{-3mm}
+	\vspace{1mm}
 	\subsectionstyle{#1}
-	\phantomsection
+	%\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}
 }
 
 % Define a paragraph for CV
@@ -596,7 +599,7 @@
   \paragraphstyle
 }{%
   \par
-  \vspace{2mm}
+  \vspace{1mm}
 }
 
 % Define an environment for cventry
@@ -610,11 +613,11 @@
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{
 %  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}%
+  \setlength\tabcolsep{5pt}%
   \setlength{\extrarowheight}{0pt}%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
     \ifempty{#2#3}{\entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\%
+      {\bfseries\entrypositionstyle{#2} & \entrylocationstyle{#3} \\%
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}%
   \end{tabular*}%
@@ -628,8 +631,8 @@
 }
 % Define a subentry of cv information
 % Usage: \cvsubentry{<position>}{<title>}{<date>}{<description>}
-\newcommand*{\cvsubentry}[4]{%
-  \setlength\tabcolsep{0pt}
+\newcommand*{\cvsubentry}[8]{%
+  \setlength\tabcolsep{5pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \setlength\leftskip{0.2cm}
@@ -684,9 +687,9 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=1ex, rightmargin=10ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
-    \renewcommand{\labelitemi}{\bullet}
+    \renewcommand{\labelitemi}{}
 }{%
   \end{itemize}
   \end{justify}

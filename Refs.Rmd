@@ -1,0 +1,58 @@
+---
+name: | 
+  José Daniel Conejeros
+date: 'UP: Marzo 2021'
+position: | 
+  | [Magíster en Sociología(c)](http://sociologia.uc.cl/postgrado/magister-en-sociologia/), Pontificia Universidad Católica de Chile
+  | Licenciado en Ciencias Sociales, Pontificia Universidad Católica de Chile
+address: Santiago, Chile. Marzo 2021
+#profilepic: JConejeros.jpg
+phone: +56 9 64924057
+email: jdconejeros@uc.cl
+# aboutme: | 
+#   | **Temas de interés**: Pobreza / Vulnerabilidad / Desigualdad social / Metodologías cuantitativas. 
+#   | Experiencia en programación para el procesamiento, análisis y visualización de datos sociales ([R](https://www.r-project.org/) y [Stata](https://www.stata.com/)). 
+#   | Experiencia en colaboración docente y vínculo profesional.
+#   | Experiencia en el levantamiento de datos cuantitativos y cualitativos.
+linkedin: joseconejerosp
+github: JDConejeros
+headcolor: 203C60
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+header-includes:
+- \geometry{left=1.4cm, top=1.5cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+- \setbool{acvSectionColorHighlight}{false}
+- \definecolor{darktext}{HTML}{182D47} #Secciones
+- \definecolor{text}{HTML}{595959} #Texto
+- \definecolor{graytext}{HTML}{101E2F} #Títulos
+- \definecolor{lighttext}{HTML}{808080} # Pie de página
+- \newcommand{\bcenter}{\begin{center}}
+- \newcommand{\ecenter}{\end{center}}
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(vitae)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r get data, include=FALSE}
+library(here)
+library(glue)
+
+## Reference 
+refs2 <- read_csv2(here::here("data", "refs2.csv"))
+```
+
+# Referencias
+
+```{r}
+detailed_entries(refs2, 
+                 what = what,
+                 with = with,
+                 why = why)
+```
+
+
+
