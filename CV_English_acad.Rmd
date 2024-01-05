@@ -1,7 +1,7 @@
 ---
-name: "José Daniel Conejeros, MSc©, BSc"
+name: "José Daniel Conejeros, MSc, BSc"
 #date: 'UP: Enero 2023'
-position: "[Msc© in Sociology](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) & [Statistics](https://www.mat.uc.cl/me.html) | Pontificia Universidad Católica de Chile"
+position: "[MSc in Sociology](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) & [Statistics](https://www.mat.uc.cl/me.html) | Pontificia Universidad Católica de Chile"
 #profilepic: JConejeros.jpg
 email: jdconejeros@uc.cl
 www: jd-conejeros.com
@@ -11,7 +11,7 @@ twitter: jose_conejeros
 linkedin: joseconejerosp
 researchgate: Jose-Conejeros
 phone: +56 9 6492 4057
-aboutme: "**Areas of Interest:** Social vulnerabilities, infectious diseases and statistical modeling techniques."
+aboutme: "**Areas of Interest:** Social vulnerabilities, infectious diseases, physical and mental health and statistical modeling techniques."
 headcolor: "203C60"
 csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
@@ -61,9 +61,11 @@ training <- read_csv2(here::here("data", "ENG", "training.csv"))
 
 ## Teaching 
 teaching1 <- read_csv2(here::here("data", "ENG", "teaching1.csv"))
+teaching2 <- read_csv2(here::here("data", "ENG", "teaching2.csv"))
 
 ## Volunter
-services <- read_csv2(here::here("data", "ENG", "services.csv"))
+services1 <- read_csv2(here::here("data", "ENG", "services1.csv"))
+services2 <- read_csv2(here::here("data", "ENG", "services2.csv"))
 
 ## Skils
 skills <- read_csv2(here::here("data", "ENG", "skills.csv")) %>% 
@@ -123,16 +125,18 @@ jobs1 %>%
 bibliography_entries("data/my_papers.bib")
 ```
 
+## Work in progress
+
+```{r}
+bibliography_entries("data/my_wip.bib")
+```
+
+\break
+
 ## Book chapters
 
 ```{r}
 bibliography_entries("data/my_bookch.bib")
-```
-
-## Articles under review and revising
-
-```{r}
-bibliography_entries("data/my_wip.bib")
 ```
 
 \fontsize{10pt}{1.5em}\bodyfontlight\upshape\color{text}
@@ -151,15 +155,30 @@ presentations %>%
 
 # Teaching
 
+## Undergraduate
+
 ```{r}
 teaching1 %>% 
   detailed_entries(
-    what = what, 
-    when = when,
-    with = with, 
-    where = where, 
-    why = why)
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
 ```
+
+## Postgraduate
+
+```{r}
+teaching2 %>% 
+  detailed_entries(
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
+```
+
 
 # Professional Memberships
 
@@ -219,20 +238,32 @@ grants %>%
     when = when)
 ```
 
-\break
-
 # Service
 
+## Social Participation
+
 ```{r}
-services %>% 
+services1 %>% 
   detailed_entries(
-    what = what, 
-    when = when,
-    with = with, 
-    #where = where, 
-    why = why)
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
 ```
 
+
+## Teaching Assistants (student)
+
+```{r}
+services2 %>% 
+  detailed_entries(
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
+```
 # References 
 
 ```{r}

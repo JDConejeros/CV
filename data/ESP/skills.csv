@@ -1,31 +1,29 @@
 ﻿category;skill
-Análisis;Modelos lineales generalizados
-Análisis;Modelos mixtos
-Análisis;Modelos de ecuaciones estructurales (SEM)
-Análisis;Inferencia causal
-Análisis;Estadística Computacional
+Análisis y visualización de datos;Modelos lineales generalizados
+Análisis y visualización de datos;Modelos mixtos
+Análisis y visualización de datos;Modelos de ecuaciones estructurales (SEM)
+Análisis y visualización de datos;Estadística espacio temporal
+Análisis y visualización de datos;Inferencia causal
+Análisis y visualización de datos;Modelos de transmisión (SIR)
+Análisis y visualización de datos;Tableau
+Análisis y visualización de datos;PowerBi
+Análisis y visualización de datos;Ggplot2
+Análisis y visualización de datos;Matplotlib
 Programación Estadística;R
-Programación Estadística;STATA 
 Programación Estadística;Python
+Programación Estadística;STATA
 Programación Estadística;SQL (Queries)
 Programación Estadística;Matlab
 Programación Estadística;IBM SPSS
 Programación Estadística;EXCEL
-Visualización de datos;Tableau
-Visualización de datos;Power-Bi
-Visualización de datos;Ggplot
-Visualización de datos;Matplotlib
-Reportes y presentaciones;Latex 
-Reportes y presentaciones;Markdown 
-Reportes y presentaciones;Quarto
-Reportes y presentaciones;Zotero
-Reportes y presentaciones;Mendeley
-Reportes y presentaciones;Word
-Reportes y presentaciones;Power Point
-Investigación reproducible ;Git
-Investigación reproducible ;Github
-Diseño de instrumentos;QuestionPro
-Diseño de instrumentos;SurveyMonkey
-Diseño de instrumentos;Qualtrics (Inicial)
+Trabajo y documentación;Latex 
+Trabajo y documentación;Markdown 
+Trabajo y documentación;Quarto
+Trabajo y documentación;Zotero
+Trabajo y documentación;Mendeley
+Trabajo y documentación;Word
+Trabajo y documentación;Power Point
+Trabajo y documentación;Git
+Trabajo y documentación;Github
 Idiomas;Español (Nativo)
-Idiomas;Inglés (Intermedio, PUC)
+Idiomas;Inglés (B1, Duolingo English Test: 80 puntos)

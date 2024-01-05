@@ -1,20 +1,21 @@
 ﻿category;skill
-Statistical Analysis;Generalized linear models
-Statistical Analysis;Mixed models
-Statistical Analysis;Structural Equation Models (SEM)
-Statistical Analysis;Causal inference
-Statistical Analysis;Computational Statistics
+Statistical Analysis and Visualization;Generalized linear models (GLM)
+Statistical Analysis and Visualization;Mixed Models
+Statistical Analysis and Visualization;Structural Equation Models  (SEM)
+Statistical Analysis and Visualization;Spatio-Temporal Statistics
+Statistical Analysis and Visualization; Causal inference
+Statistical Analysis and Visualization;Transmission Models (SIR)
+Statistical Analysis and Visualization;Tableau
+Statistical Analysis and Visualization;PowerBi
+Statistical Analysis and Visualization;Ggplot2
+Statistical Analysis and Visualization;Matplotlib
 Statistical Programming;R
-Statistical Programming;STATA 
 Statistical Programming;Python
+Statistical Programming;STATA
 Statistical Programming;SQL (Queries)
 Statistical Programming;Matlab
 Statistical Programming;IBM SPSS
 Statistical Programming;EXCEL
-Data visualization;Tableau
-Data visualization;Power-Bi
-Data visualization;Ggplot
-Data visualization;Matplotlib
 Reports and presentations;Latex 
 Reports and presentations;Markdown 
 Reports and presentations;Quarto
@@ -24,8 +25,5 @@ Reports and presentations;Word
 Reports and presentations;Power Point
 Open reseach;Git
 Open reseach;Github
-Instrument design;QuestionPro
-Instrument design;SurveyMonkey
-Instrument design;Qualtrics (Inicial)
 Languages;Spanish (Native)
-Languages;English (B1, PUC)
+Languages;English (B1, Duolingo English Test: 80 points)

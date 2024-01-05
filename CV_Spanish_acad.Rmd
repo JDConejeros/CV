@@ -1,7 +1,7 @@
 ---
-name: "José Daniel Conejeros, MSc©, BSc"
+name: "José Daniel Conejeros, MSc, BSc"
 #date: 'UP: Enero 2023'
-position: "[Msc© en Sociología](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) & [Estadística](https://www.mat.uc.cl/me.html) | Pontificia Universidad Católica de Chile"
+position: "[Msc en Estadística](https://www.mat.uc.cl/me.html) & [Sociología](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) | Pontificia Universidad Católica de Chile"
 #profilepic: JConejeros.jpg
 email: jdconejeros@uc.cl
 www: jd-conejeros.com
@@ -11,13 +11,13 @@ twitter: jose_conejeros
 linkedin: joseconejerosp
 researchgate: Jose-Conejeros
 phone: +56 9 6492 4057
-aboutme: "**Áreas de interés:** Vulnerabilidades sociales, enfermedades infecciosas y técnicas de modelamiento estadístico."
+aboutme: "**Áreas de interés:** Vulnerabilidades sociales a enfermedades infecciosas, determinantes sociales de la salud y modelamiento estadístico computacional."
 headcolor: "203C60"
 csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
   vitae::awesomecv:
     pandoc_args: ["--lua-filter=lua/bib_bold.lua"] 
-    keep_tex: true
+    keep_tex: false
 header-includes:
 - \geometry{left=2cm, top=2cm, right=2cm, bottom=2cm, footskip=0.5cm}
 - \newcommand{\bcenter}{\begin{center}}
@@ -61,9 +61,11 @@ training <- read_csv2(here::here("data", "ESP", "training.csv"))
 
 ## Teaching 
 teaching1 <- read_csv2(here::here("data", "ESP", "teaching1.csv"))
+teaching2 <- read_csv2(here::here("data", "ESP", "teaching2.csv"))
 
 ## Volunter
-services <- read_csv2(here::here("data", "ESP", "services.csv"))
+services1 <- read_csv2(here::here("data", "ESP", "services1.csv"))
+services2 <- read_csv2(here::here("data", "ESP", "services2.csv"))
 
 ## Skils
 skills <- read_csv2(here::here("data", "ESP", "skills.csv")) %>% 
@@ -83,7 +85,7 @@ reference <- read_csv2(here::here("data", "ESP", "reference.csv"))
 ```
 
 
-# Educación 
+# ESTUDIOS
 
 ```{r}
 detailed_entries(edu, 
@@ -95,7 +97,7 @@ detailed_entries(edu,
                  )
 ```
 
-# Participación en proyectos de investigación
+# EXPERIENCIA LABORAL
 
 ```{r}
 jobs1 %>% 
@@ -107,69 +109,95 @@ jobs1 %>%
     why = details)
 ```
 
-# Publicaciones
+# PUBLICACIONES 
 
 \fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}
 
-## Artículos 
-
+## PUBLICACIONES INDEXADAS 
 
 ```{r}
 bibliography_entries("data/my_papers.bib")
 ```
 
-## Capítulos de libros
 
-```{r}
-bibliography_entries("data/my_bookch.bib")
-```
-
-
-## Trabajos en revisión 
+## TRABAJOS EN PROGRESO
 
 ```{r}
 bibliography_entries("data/my_wip.bib")
 ```
 
-\fontsize{10pt}{1.5em}\bodyfontlight\upshape\color{text}
+\break
 
-# Presentaciones
+## CAPÍTULOS DE LIBROS
 
 ```{r}
-presentations %>% 
-  detailed_entries(
-    what = what,
-    with = with,
-    when = when,
-    where = where,
-    why = why)
+bibliography_entries("data/my_bookch.bib")
 ```
 
-# Docencia 
+## COLABORACIONES METODOLÓGICAS 
+
+```{r}
+bibliography_entries("data/my_colaborations.bib")
+```
+
+
+\fontsize{10pt}{1.5em}\bodyfontlight\upshape\color{text}
+
+<!-- # Afiliación a centros de investigación y asociaciones profesionales -->
+
+<!-- ```{r} -->
+<!-- centers %>%  -->
+<!--   detailed_entries( -->
+<!--     what = what, -->
+<!--     #with = with, -->
+<!--     when = when, -->
+<!--     #where = where, -->
+<!--     why = why) -->
+<!-- ``` -->
+
+
+# EXPERIENCIA DOCENTE
+
+## PREGRADO
 
 ```{r}
 teaching1 %>% 
   detailed_entries(
-    what = what, 
-    when = when,
-    with = with, 
-    where = where, 
-    why = why)
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
 ```
 
-# Afiliación a centros de investigación y asociaciones profesionales
+## POSTGRADO
 
 ```{r}
-centers %>% 
+teaching2 %>% 
   detailed_entries(
-    what = what,
-    #with = with,
-    when = when,
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
     #where = where,
-    why = why)
+    why = details)
 ```
 
-# Consultorías profesionales
+# CONGRESOS & PRESENTACIONES
+
+```{r}
+presentations %>% 
+  detailed_entries(
+    what = role,
+    when = glue("{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
+```
+
+
+\break
+
+# CONSULTORÍAS PROFESIONALES 
 
 ```{r}
 jobs2 %>% 
@@ -181,8 +209,7 @@ jobs2 %>%
     why = details)
 ```
 
-
-# Cursos y certificaciones
+# CERTIFICACIONES
 
 ```{r}
 training %>% 
@@ -194,8 +221,7 @@ training %>%
     why = why)
 ```
 
-
-# Habilidades
+# HABILIDADES
 
 ```{r}
 skills %>% 
@@ -205,7 +231,7 @@ skills %>%
 ```
 
 
-# Becas y Premios
+# BECAS & PREMIOS
 
 ```{r}
 grants %>% 
@@ -215,21 +241,35 @@ grants %>%
     when = when)
 ```
 
-\break
 
-# Voluntariado
+# VOLUNTARIADO
+
+## Participación social
 
 ```{r}
-services %>% 
+services1 %>% 
   detailed_entries(
-    what = what, 
-    when = when,
-    with = with, 
-    #where = where, 
-    why = why)
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
 ```
 
-# Referencias 
+
+## Ayudantías
+
+```{r}
+services2 %>% 
+  detailed_entries(
+    what = role,
+    when = glue("{start_date}--{end_date}"),
+    #with = company,
+    #where = where,
+    why = details)
+```
+
+# REFERENCIAS
 
 ```{r}
 reference %>% 
