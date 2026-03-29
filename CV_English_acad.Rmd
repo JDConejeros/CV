@@ -1,17 +1,18 @@
 ---
-name: "José Daniel Conejeros, MSc, BSc"
-#date: 'UP: Enero 2023'
-position: "[MSc in Sociology](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) & [Statistics](https://www.mat.uc.cl/me.html) | Pontificia Universidad Católica de Chile"
+name: "José Daniel Conejeros, MSc, BSc."
+date: 'Last updated: March, 2026'
+position: "BIO-Fulbright Scholar | Lagrange Fellow ISI Foundation"
+#"[MSc in Sociology](http://sociologia.uc.cl/postgrado/magister-en-sociologia/) & [Statistics](https://www.mat.uc.cl/me.html) | Pontificia Universidad Católica de Chile"
 #profilepic: JConejeros.jpg
-email: jdconejeros@uc.cl
+email: jo.conejeros@gmail.com
+github: "JDConejeros"
 www: jd-conejeros.com
-github: github.com/JDConejeros
 orcid: orcid.org/0000-0003-3402-4361
-twitter: jose_conejeros
+#twitter: jose_conejeros
 linkedin: joseconejerosp
 researchgate: Jose-Conejeros
 phone: +56 9 6492 4057
-aboutme: "**Areas of Interest:** Social vulnerabilities, infectious diseases, physical and mental health and statistical modeling techniques."
+#aboutme: "**RESEARCH INTERESTS:** Infectious diseases vulnerabilities, climatic change and statistical modeling techniques."
 headcolor: "203C60"
 csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
@@ -22,8 +23,6 @@ header-includes:
 - \geometry{left=2cm, top=2cm, right=2cm, bottom=2cm, footskip=0.5cm}
 - \newcommand{\bcenter}{\begin{center}}
 - \newcommand{\ecenter}{\end{center}}
-- \fancyfoot[L]{\fontsize{8pt}{-1em}\footerfont\color{lighttext}{Page \thepage \ of \pageref{LastPage}}}
-- \fancyfoot[R]{\fontsize{8pt}{-1em}\footerfont\color{lighttext}{Revised February 2023}}
 ---
 
 
@@ -85,7 +84,7 @@ reference <- read_csv2(here::here("data", "ENG", "reference.csv"))
 ```
 
 
-# Education
+# EDUCATION
 
 ```{r}
 detailed_entries(edu, 
@@ -97,7 +96,8 @@ detailed_entries(edu,
                  )
 ```
 
-# Profesional Employment
+
+# RESEARCH EXPERIENCE 
 
 ```{r}
 jobs1 %>% 
@@ -109,13 +109,14 @@ jobs1 %>%
     why = details)
 ```
 
-
 \fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}
 
-*A Fondecyt Regular is a scientific research project funded by the National Agency for Research and Development ([ANID](https://www.anid.cl/proyectos-de-investigacion/fondecyt-regular/), Chile).
+FR: Fondecyt Regular is a scientific research project funded by the National Agency for Research and Development ([ANID](https://www.anid.cl/proyectos-de-investigacion/fondecyt-regular/), Chile). 
+
+\fontsize{10pt}{1.5em}\bodyfontlight\upshape\color{text}
 
 
-# Publications
+# PAPERS & PUBLICATIONS
 
 \fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}
 
@@ -125,35 +126,33 @@ jobs1 %>%
 bibliography_entries("data/my_papers.bib")
 ```
 
-## Work in progress
+<!--\break-->
+
+<!--## Articles under review
+
+```{r}
+bibliography_entries("data/my_wur.bib")
+```
+
+-->
+
+## Articles in preparation
 
 ```{r}
 bibliography_entries("data/my_wip.bib")
 ```
 
-\break
-
-## Book chapters
+# HONORS AND AWARDS
 
 ```{r}
-bibliography_entries("data/my_bookch.bib")
-```
-
-\fontsize{10pt}{1.5em}\bodyfontlight\upshape\color{text}
-
-# Conferences, Workshops, and Talks
-
-```{r}
-presentations %>% 
+grants %>% 
   detailed_entries(
-    what = what,
-    with = with,
-    when = when,
-    where = where,
-    why = why)
+    why = why, 
+    what = with, 
+    when = when)
 ```
 
-# Teaching
+# TEACHING EXPERIENCE 
 
 ## Undergraduate
 
@@ -167,7 +166,7 @@ teaching1 %>%
     why = details)
 ```
 
-## Postgraduate
+## Postgraduate 
 
 ```{r}
 teaching2 %>% 
@@ -180,45 +179,7 @@ teaching2 %>%
 ```
 
 
-# Professional Memberships
-
-```{r}
-centers %>% 
-  detailed_entries(
-    what = what,
-    #with = with,
-    when = when,
-    #where = where,
-    why = why)
-```
-
-# Profesional Service
-
-```{r}
-jobs2 %>% 
-  detailed_entries(
-    what = role,
-    when = glue("{end_date}"),
-    #with = company,
-    #where = where,
-    why = details)
-```
-
-
-# Certificates and Training
-
-```{r}
-training %>% 
-  detailed_entries(
-    what = what, 
-    #with = with, 
-    when = when, 
-    #where = where, 
-    why = why)
-```
-
-
-# Special Skills
+# SKILLS
 
 ```{r}
 skills %>% 
@@ -228,43 +189,7 @@ skills %>%
 ```
 
 
-# Scholarships and awards
-
-```{r}
-grants %>% 
-  detailed_entries(
-    why = why, 
-    what = with, 
-    when = when)
-```
-
-# Service
-
-## Social Participation
-
-```{r}
-services1 %>% 
-  detailed_entries(
-    what = role,
-    when = glue("{start_date}--{end_date}"),
-    #with = company,
-    #where = where,
-    why = details)
-```
-
-
-## Teaching Assistants (student)
-
-```{r}
-services2 %>% 
-  detailed_entries(
-    what = role,
-    when = glue("{start_date}--{end_date}"),
-    #with = company,
-    #where = where,
-    why = details)
-```
-# References 
+# REFERENCES
 
 ```{r}
 reference %>% 
@@ -281,9 +206,7 @@ reference %>%
 
 \begin{footnotesize}
 \bcenter
-This document was prepared in \href{https://rmarkdown.rstudio.com/}{R-markdown} with the `vitae` library. 
-
-To replicate you can use the source code here: \href{https://github.com/JDConejeros/CV}{https://github.com/JDConejeros/CV}
+Source code for replication: \href{https://github.com/JDConejeros/CV}{https://github.com/JDConejeros/CV}
 \ecenter
 \end{footnotesize}
 
